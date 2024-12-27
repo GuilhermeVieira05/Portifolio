@@ -1,4 +1,4 @@
-import React, {useEffect , useRef} from "react";
+import {useEffect , useRef} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "../assets/styles/Home.module.scss"
@@ -17,15 +17,21 @@ export default function Home(){
     const isScrolled = useScrolled()
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
+        const handleScroll = () => {
           let offset = window.pageYOffset;
           const parallax = document.querySelector(".parallax");
-          if(parallax){
-              parallax.style.backgroundPositionY = offset * 0.5 + "px"; 
+      
+          // Verificando se o elemento existe e se é um HTMLElement
+          if (parallax && parallax instanceof HTMLElement) {
+            parallax.style.backgroundPositionY = offset * 0.5 + "px"; 
           }
-        });
+        };
+      
+        window.addEventListener("scroll", handleScroll);
+      
+        // Remover o event listener na desmontagem do componente
         return () => {
-          window.removeEventListener("scroll", () => {});
+          window.removeEventListener("scroll", handleScroll);
         };
       }, []);
 
