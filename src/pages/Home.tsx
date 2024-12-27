@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import AOS from "aos";
 import useScrolled from "../hooks/useScroll";
 import curriculo from "../assets/Currículo - Guilherme de Almeida Rocha Vieira.pdf"
+import CardProject from "../components/CardProject";
 
 export default function Home(){
 
@@ -127,7 +128,7 @@ export default function Home(){
 
                 <div className={styles.parallax}></div>
 
-                <h2>Habilidades Técnicas</h2>
+                <h2 id="skills">Habilidades Técnicas</h2>
                 <section className={styles.tech}>
                     <div data-aos="fade-right">
                         <CardTech
@@ -193,38 +194,13 @@ export default function Home(){
 
                 <h2>Projetos</h2>
                 <section ref={sectionRef} className={styles.exp}>
-                    <div 
-                    data-aos="fade-right" 
-                    data-aos-duration="2000"
-                    className={styles.timelineItem}
-                    >
-                        <div className={styles.timelineDate}>2024</div>
-                        <div className={styles.timelineContent}>
-                            <h3>Posição 1</h3>
-                            <p>Descrição da experiência 1.</p>
-                        </div>
-                    </div>
-                    <div 
-                    data-aos="fade-right" 
-                    data-aos-duration="3000"
-                    className={styles.timelineItem}
-                    >
-                        <div className={styles.timelineDate}>2023</div>
-                        <div className={styles.timelineContent}>
-                            <h3>Posição 2</h3>
-                            <p>Descrição da experiência 2.</p>
-                        </div>
-                    </div>
-                    <div 
-                    data-aos="fade-right" 
-                    data-aos-duration="3000"
-                    className={styles.timelineItem}
-                    >
-                        <div className={styles.timelineDate}>2022</div>
-                        <div className={styles.timelineContent}>
-                            <h3>Posição 3</h3>
-                            <p>Descrição da experiência 3.</p>
-                        </div>
+                    <div>
+                        <CardProject
+                        image="https://cdn.pixabay.com/photo/2024/06/01/14/00/ai-8802304_1280.jpg"
+                        title="Teste"
+                        desc="testetetetete"
+                        link="https://cdn.pixabay.com/photo/2024/06/01/14/00/ai-8802304_1280.jpg"
+                        />
                     </div>
                 </section>
 
@@ -240,13 +216,13 @@ export default function Home(){
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/seuperfil" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+                            <a href="https://www.linkedin.com/in/guilherme-arvieira/" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
                                 <FontAwesomeIcon icon={faLinkedin} />
                                 <span>LinkedIn</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/seuperfil" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
+                            <a href="https://github.com/GuilhermeVieira05" target="_blank" rel="noopener noreferrer" className={styles.contactItem}>
                                 <FontAwesomeIcon icon={faGithub} />
                                 <span>GitHub</span>
                             </a>
