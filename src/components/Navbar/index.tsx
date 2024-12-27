@@ -24,12 +24,12 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled }) => {
 
         {/* Menu principal */}
         <div className={`${styles.mainMenu} ${isMenuOpen ? styles.open : ""}`}>
-          <a href="">Início</a>
-          <a href="#experience">Experiência</a>
+          <a href="#">Home</a>
+          <a href="#exp">Experiência</a>
           <a href="#skills">Skills</a>
-          <a href="">Sobre</a>
-          <a href="">Projetos</a>
-          <a href="">Contato</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#project">Projetos</a>
+          <a href="#contact">Contato</a>
         </div>
 
         {/* Botão de menu para telas pequenas */}

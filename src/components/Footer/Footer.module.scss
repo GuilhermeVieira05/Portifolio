@@ -14,86 +14,17 @@
 
   .footer {
     position: relative;
-    background-color: var(--background-color); // Utilizando a cor de fundo
+    background: linear-gradient(90deg, #083058 70%, #1b2836 30%);
     color: var(--text-color); // Cor do texto
     margin-top: auto;
     width: 100%;
     overflow-x: hidden;
   
-    .waveTop {
-      position: relative;
-      top: -1px;
-  
-      svg {
-        width: 100%;
-        height: 80px;
-      }
-  
-      path {
-        d: path("M0,0V46.29c120,22,240,22,360,0S600,2,720,24s240,22,360,0S1200,2,1200,2V0Z");
-        fill: var(--text-color); // Cor do texto para a onda
-      }
-    }
-  
-    .footerContent {
-      padding-top: 4rem;
-      padding-bottom: 2rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      text-align: center;
-  
-      @media (min-width: 640px) {
-        grid-template-columns: repeat(2, 1fr);
-        text-align: left;
-        padding-left: 5rem;
-        padding-right: 5rem;
-      }
-  
-      @media (min-width: 1024px) {
-        grid-template-columns: repeat(4, 1fr);
-        padding-left: 10rem;
-        padding-right: 10rem;
-      }
-  
-      @media (min-width: 1280px) {
-        grid-template-columns: repeat(5, 1fr);
-        padding-left: 10rem;
-        padding-right: 10rem;
-      }
-  
-      .column {
-        .title {
-          font-size: 1.125rem;
-          font-weight: bold;
-          color: var(--primary-color); // Usando a cor primária para os títulos
-        }
-  
-        ul {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-  
-          li {
-            padding: 0.25rem 0;
-            cursor: pointer;
-            transition: color 0.3s ease;
-  
-            &:hover {
-              color: var(--secondary-color); // Usando a cor secundária para o hover
-            }
-          }
-        }
-      }
-    }
-  
     .footerCopyright {
       position: relative;
       text-align: center;
       padding: 1rem;
-      background-color: var(--background-color); // Cor de fundo igual ao footer
+      background: linear-gradient(90deg, #083058 70%, #1b2836 30%);
   
       p {
         font-size: 0.875rem;

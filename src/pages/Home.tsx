@@ -1,21 +1,26 @@
-import {useEffect , useRef} from "react";
+import {useEffect} from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import styles from "../assets/styles/Home.module.scss"
 import profileImg from "../assets/imgs/fotoColacao.jpg"
+import favicon from "../assets/imgs/favicon.png"
 import CardTech from "../components/CardTech";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faReact, faJava, faJs, faPython, faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
-import {faDatabase, faArrowAltCircleDown, faEnvelope} from "@fortawesome/free-solid-svg-icons"
+import {faDatabase, faArrowAltCircleDown, faEnvelope, faLeaf} from "@fortawesome/free-solid-svg-icons"
 import 'aos/dist/aos.css';
 import AOS from "aos";
 import useScrolled from "../hooks/useScroll";
 import curriculo from "../assets/Currículo - Guilherme de Almeida Rocha Vieira.pdf"
 import CardProject from "../components/CardProject";
+import useDocumentTitle from "../hooks/useTitle";
+import useFavicon from "../hooks/useFavicon";
 
 export default function Home(){
 
     const isScrolled = useScrolled()
+    useDocumentTitle("GuilhermeVieira")
+    useFavicon(favicon)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -45,7 +50,6 @@ export default function Home(){
         });
       }, []);
 
-    const sectionRef = useRef(null)
 
 
     return(
@@ -54,7 +58,7 @@ export default function Home(){
             isScrolled = {isScrolled}
             />
             <div className={styles.main}>
-                <section className={styles.profile}>
+                <section id="profile" className={styles.profile}>
                     <div className={styles.desc}>
                         <span className={styles.title}>Software Engineer</span>
                         <p>Meu nome é Guilherme, sou estudante do curso de Engenharia de Software na Puc Minas. Sou um entusiasta da área de tecnologia. Adoro estudar e estar me aprofundando na área da programação. </p>
@@ -90,7 +94,7 @@ export default function Home(){
                 <div className={styles.parallax}></div>
 
                 <h2>Experiências</h2>
-                <section ref={sectionRef} className={styles.exp}>
+                <section id="exp" className={styles.exp}>
                     <div 
                     data-aos="fade-right" 
                     data-aos-duration="2000"
@@ -130,84 +134,117 @@ export default function Home(){
 
                 <h2 id="skills">Habilidades Técnicas</h2>
                 <section className={styles.tech}>
-                    <div data-aos="fade-right">
+                    <div 
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    >
                         <CardTech
                         techName="React"
                         techImage={<FontAwesomeIcon icon={faReact} size="2x" />}
                         />
                     </div>
-                    <div data-aos="fade-up">
+                    <div data-aos="fade-up" data-aos-duration="1000">
                         <CardTech
                         techName="Java"
                         techImage={<FontAwesomeIcon icon={faJava} size="2x" />}
                         />
                     </div>
-                    <div data-aos="fade-left">
+                    <div data-aos="fade-left" data-aos-duration="1000">
                         <CardTech
-                        techName="JavaScript"
+                        techName="TypeScript"
                         techImage={<FontAwesomeIcon icon={faJs} size="2x" />}
                         />
                     </div>
-                    <div data-aos="fade-right">
+                    <div data-aos="fade-right" data-aos-duration="1000">
                         <CardTech
                         techName="SQL Server"
                         techImage={<FontAwesomeIcon icon={faDatabase} size="2x" />}
                         />
                     </div>
-                    <div data-aos="fade-up">
+                    <div data-aos="fade-up" data-aos-duration="1000">
                         <CardTech
                         techName="Python"
                         techImage={<FontAwesomeIcon icon={faPython} size="2x" />}
                         />
                     </div>
-                    <div data-aos="fade-left">
+                    <div data-aos="fade-left" data-aos-duration="1000">
                         <CardTech
                         techName="Git / GitHub"
                         techImage={<FontAwesomeIcon icon={faGithub} size="2x" />}
                         />
                     </div>
-                    
+                    <div data-aos="fade-left" data-aos-duration="1000">
+                        <CardTech
+                        techName="SpringBoot"
+                        techImage={<FontAwesomeIcon icon={faLeaf} size="2x" />}
+                        />
+                    </div>
                     
                     
                 </section>
 
                 <div className={styles.parallax}></div>
 
-                <h2>Sobre Mim</h2>
-                <section ref={sectionRef} className={styles.exp}>
-                <p>
-                    Olá, meu nome é Guilherme de Almeida Rocha Vieira e sou estudante de Engenharia de Software na PUC Minas. 
-                    Apaixonado por tecnologia e programação, tenho me dedicado a aprender e aplicar novas ferramentas e tecnologias. 
-                    Tenho experiência no desenvolvimento de sistemas web e estou sempre em busca de novos desafios para crescer na área de TI.
-                </p>
-                <p>
-                    Atualmente, estou focado em aprender mais sobre desenvolvimento de software, com interesse especial em React, JavaScript e Python. 
-                    Meu objetivo é aplicar esses conhecimentos para criar soluções inovadoras, eficientes e que façam a diferença no mundo.
-                </p>
-                <p>
-                    Fora do mundo da programação, sou um grande entusiasta de esportes, especialmente ciclismo, e também dedico parte do meu tempo 
-                    a projetos sociais e voluntariado. Acredito que o aprendizado constante e o trabalho em equipe são fundamentais para o crescimento pessoal e profissional.
-                </p>
+                <h2 id="sobre" className={styles.conheca}>Conheca um Pouco</h2>
+                <h2 className={styles.sobre}>Sobre Mim</h2>
+                <section className={styles.about}>
+                <div 
+                className={styles.info}
+                >
+                    <p data-aos="fade-right">
+                        Olá, meu nome é Guilherme de Almeida Rocha Vieira e sou estudante de Engenharia de Software na PUC Minas.
+                        Apaixonado por tecnologia e programação, tenho me dedicado a aprender e aplicar novas ferramentas e tecnologias.
+                        Tenho experiência no desenvolvimento de sistemas web e estou sempre em busca de novos desafios para crescer na área de TI.
+                    </p>
+                    <p data-aos="fade-right">
+                        Meu objetivo é aplicar esses conhecimentos para criar soluções inovadoras, eficientes e que façam a diferença no mundo.
+                    </p>
+
+                    <div className={styles.softSkills}>
+                        <h3 className={styles.softTitle}>Soft Skills</h3>
+                        <ul>
+                            <li data-aos="flip-up" data-aos-duration="3000">Comunicação</li>
+                            <li data-aos="flip-up" data-aos-duration="3000">Trabalho em Equipe</li>
+                            <li data-aos="flip-up" data-aos-duration="3000">Disciplina</li>
+                            <li data-aos="flip-up" data-aos-duration="3000">Responsável</li>
+                            <li data-aos="flip-up" data-aos-duration="3000">Liderança</li>
+                            <li data-aos="flip-up" data-aos-duration="3000">Proatividade</li>
+                            <li data-aos="flip-up" data-aos-duration="3000">Autoditata </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div 
+                data-aos="fade-left"
+                data-aos-duration="3000"
+                className={styles.infoImage}
+                >
+                    <img src="https://cdn.pixabay.com/photo/2017/05/17/15/08/ransomware-2321110_1280.jpg" alt="" />
+                </div>
                 </section>
 
                 <div className={styles.parallax}></div>
 
                 <h2>Projetos</h2>
-                <section ref={sectionRef} className={styles.exp}>
-                    <div>
-                        <CardProject
-                        image="https://cdn.pixabay.com/photo/2024/06/01/14/00/ai-8802304_1280.jpg"
-                        title="Teste"
-                        desc="testetetetete"
-                        link="https://cdn.pixabay.com/photo/2024/06/01/14/00/ai-8802304_1280.jpg"
-                        />
-                    </div>
+                <section id="project" className={styles.project}>
+                <CardProject
+                    image={profileImg}
+                    title="Tread Skateboard"
+                    category="E-Commerce"
+                    desc="Desenvolvido para oferecer uma experiência única, o site reflete a essência do skateboarding com design intuitivo e uma plataforma de compras."
+                    link="https://example.com"
+                    technologies={[
+                        <FontAwesomeIcon icon={faJava} size="2x"/>,
+                        <FontAwesomeIcon icon={faPython} size="2x"/>,
+                        <FontAwesomeIcon icon={faJs} size="2x"/>
+                    ]}
+                    />
                 </section>
 
                 <div className={styles.parallax}></div>
 
-                <h2>Contato</h2>
-                <section className={styles.contactSection}>
+                <h2>Entre em contato</h2>
+                <section id="contact" className={styles.contactSection}>
                     <ul className={styles.contactList}>
                         <li>
                             <a href="mailto:guilhermearv3@gmail.com" className={styles.contactItem}>
@@ -236,7 +273,6 @@ export default function Home(){
                     </ul>
                 </section>
 
-                <div className={styles.parallax}></div>
 
             </div>
             <Footer/>
