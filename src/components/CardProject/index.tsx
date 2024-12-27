@@ -28,8 +28,8 @@ const CardProject: React.FC<CardProjectProps> = ({
         <h3>{category}</h3>
         <p>{desc}</p>
         <div className={styles.technologies}>
-          {technologies?.map((tech) => (
-            <p className={styles.tech}>{tech}</p>
+          {technologies?.map((tech, key) => (
+            <p key={key} className={styles.tech}>{tech}</p>
           ))}
         </div>
         <div className={styles.buttonContainer}>

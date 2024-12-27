@@ -4,9 +4,13 @@ import Footer from "../components/Footer";
 import styles from "../assets/styles/Home.module.scss"
 import profileImg from "../assets/imgs/fotoColacao.jpg"
 import favicon from "../assets/imgs/favicon.png"
+import gagro from "../assets/imgs/gagro.png"
+import voogle from "../assets/imgs/Voogle.jpg"
+import ts from "../assets/imgs/typescript.ico"
+import tailwind from "../assets/imgs/tailwind.png"
 import CardTech from "../components/CardTech";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReact, faJava, faJs, faPython, faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons"
+import { faReact, faJava, faJs, faPython, faGithub, faLinkedin, faWhatsapp, faBootstrap } from "@fortawesome/free-brands-svg-icons"
 import {faDatabase, faArrowAltCircleDown, faEnvelope, faLeaf} from "@fortawesome/free-solid-svg-icons"
 import 'aos/dist/aos.css';
 import AOS from "aos";
@@ -228,15 +232,31 @@ export default function Home(){
                 <h2>Projetos</h2>
                 <section id="project" className={styles.project}>
                 <CardProject
-                    image={profileImg}
-                    title="Tread Skateboard"
-                    category="E-Commerce"
-                    desc="Desenvolvido para oferecer uma experiência única, o site reflete a essência do skateboarding com design intuitivo e uma plataforma de compras."
-                    link="https://example.com"
+                    image={gagro}
+                    title="G-AGRO"
+                    category="Agropecuária"
+                    desc="Sistema desenvolvido no projeto da faculdade, onde criamos um software de gerenciamento agropecuário, visando facilitar e aumentar a eficiência de pequenos e médios produtores."
+                    link="https://github.com/GuilhermeVieira05/pmg-es-2024-2-ti2-3687100-g-agro"
                     technologies={[
                         <FontAwesomeIcon icon={faJava} size="2x"/>,
-                        <FontAwesomeIcon icon={faPython} size="2x"/>,
-                        <FontAwesomeIcon icon={faJs} size="2x"/>
+                        <FontAwesomeIcon icon={faReact} size="2x"/>,
+                        <FontAwesomeIcon icon={faJs} size="2x"/>,
+                        <FontAwesomeIcon icon={faLeaf} size="2x"/>,
+                        <FontAwesomeIcon icon={faBootstrap} size="2x"/>
+                    ]}
+                    />
+                
+                <CardProject
+                    image={voogle}
+                    title="Voogle"
+                    category="Seguros"
+                    desc="Página estática desenvolvida para um cliente, que visava a adesão de novos leads."
+                    link="https://github.com/ProjetoVoogle/Voogle"
+                    technologies={[
+                        <FontAwesomeIcon icon={faReact} size="2x"/>,
+                        <FontAwesomeIcon icon={faJs} size="2x"/>,
+                        <img src={ts} style={{filter: "grayscale(90%)"}} alt="ts" />,
+                        <img src={tailwind} style={{filter: "grayscale(90%)"}} alt="ts" />
                     ]}
                     />
                 </section>

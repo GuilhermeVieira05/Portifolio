@@ -109,9 +109,17 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    
   }
 
   .menuButton {
     display: flex;
+  }
+
+  .mainScrolled{
+    position: fixed;
+  width: 100vw;
+  background: #1b2836;
+  z-index: 1;
   }
 }
