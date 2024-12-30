@@ -6,11 +6,12 @@ import profileImg from "../assets/imgs/fotoColacao.jpg"
 import favicon from "../assets/imgs/favicon.png"
 import gagro from "../assets/imgs/gagro.png"
 import voogle from "../assets/imgs/Voogle.jpg"
+import bbf from "../assets/imgs/BBF.png"
 import ts from "../assets/imgs/typescript.ico"
 import tailwind from "../assets/imgs/tailwind.png"
 import CardTech from "../components/CardTech";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faReact, faJava, faJs, faPython, faGithub, faLinkedin, faWhatsapp, faBootstrap } from "@fortawesome/free-brands-svg-icons"
+import { faReact, faJava, faJs, faPython, faGithub, faLinkedin, faWhatsapp, faBootstrap, faHtml5, faCss3 } from "@fortawesome/free-brands-svg-icons"
 import {faDatabase, faArrowAltCircleDown, faEnvelope, faLeaf} from "@fortawesome/free-solid-svg-icons"
 import 'aos/dist/aos.css';
 import AOS from "aos";
@@ -256,7 +257,21 @@ export default function Home(){
                         <FontAwesomeIcon icon={faReact} size="2x"/>,
                         <FontAwesomeIcon icon={faJs} size="2x"/>,
                         <img src={ts} style={{filter: "grayscale(90%)"}} alt="ts" />,
-                        <img src={tailwind} style={{filter: "grayscale(90%)"}} alt="ts" />
+                        <img src={tailwind} style={{filter: "grayscale(90%)"}} alt="tailwind" />
+                    ]}
+                    />
+
+                      
+                <CardProject
+                    image={bbf}
+                    title="Básico Bem Feito"
+                    category="Academia"
+                    desc="Site desenvolvida durante um projeto da faculdade, que visava atender ao mercado fitness. Nele, o cliente teria acesso ao gerenciamento de seu treino e de suas fichas de treino."
+                    link="https://github.com/GuilhermeVieira05/BasicoBemFeito"
+                    technologies={[
+                        <FontAwesomeIcon icon={faJs} size="2x"/>,
+                        <FontAwesomeIcon icon={faHtml5} size="2x"/>,
+                        <FontAwesomeIcon icon={faCss3} size="2x"/>,
                     ]}
                     />
                 </section>
