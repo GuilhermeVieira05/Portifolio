@@ -66,7 +66,7 @@ export default function Home(){
                 <section id="profile" className={styles.profile}>
                     <div className={styles.desc}>
                         <span className={styles.title}>Software Engineer</span>
-                        <p>Meu nome é Guilherme, sou estudante do curso de Engenharia de Software na Puc Minas. Sou um entusiasta da área de tecnologia. Adoro estudar e estar me aprofundando na área da programação. </p>
+                        <p>Meu nome é Guilherme, sou estudante do curso de Engenharia de Software na Puc Minas. Sou um entusiasta da área de tecnologia. Adoro estudar e aprofundar na área da programação. </p>
                         <a 
                         className={styles.cButton}
                         href={curriculo}
@@ -266,7 +266,7 @@ export default function Home(){
                     image={bbf}
                     title="Básico Bem Feito"
                     category="Academia"
-                    desc="Site desenvolvida durante um projeto da faculdade, que visava atender ao mercado fitness. Nele, o cliente teria acesso ao gerenciamento de seu treino e de suas fichas de treino."
+                    desc="Site desenvolvido durante um projeto da faculdade, que visava atender ao mercado fitness. Nele, o cliente teria acesso ao gerenciamento de seu treino e de suas fichas de treino."
                     link="https://github.com/GuilhermeVieira05/BasicoBemFeito"
                     technologies={[
                         <FontAwesomeIcon icon={faJs} size="2x"/>,
