@@ -105,6 +105,17 @@ export default function Home(){
                     data-aos-duration="2000"
                     className={styles.timelineItem}
                     >
+                        <div className={styles.timelineDate}>2025</div>
+                        <div className={styles.timelineContent}>
+                            <h3>Estágiario - Desenvolvimento Fullstack</h3>
+                            <p>Atuo no desenvolvimento de soluções automatizadas e manipulação de grandes volumes de dados, utilizando PHP, Python, HTML e PostgreSQL. Trabalho na criação de robôs e automações para otimizar processos, além de contribuir para a gestão de banco de dados.</p>
+                        </div>
+                    </div>
+                    <div 
+                    data-aos="fade-right" 
+                    data-aos-duration="3000"
+                    className={styles.timelineItem}
+                    >
                         <div className={styles.timelineDate}>2024</div>
                         <div className={styles.timelineContent}>
                             <h3>Freelancer - Desenvolvimento Web</h3>
@@ -113,7 +124,7 @@ export default function Home(){
                     </div>
                     <div 
                     data-aos="fade-right" 
-                    data-aos-duration="3000"
+                    data-aos-duration="4000"
                     className={styles.timelineItem}
                     >
                         <div className={styles.timelineDate}>2024</div>
@@ -124,7 +135,7 @@ export default function Home(){
                     </div>
                     <div 
                     data-aos="fade-right" 
-                    data-aos-duration="3000"
+                    data-aos-duration="4000"
                     className={styles.timelineItem}
                     >
                         <div className={styles.timelineDate}>2024</div>
@@ -174,6 +185,12 @@ export default function Home(){
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1000">
                         <CardTech
+                        techName="Django"
+                        techImage={<FontAwesomeIcon icon={faPython} size="2x" />}
+                        />
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1000">
+                        <CardTech
                         techName="Git / GitHub"
                         techImage={<FontAwesomeIcon icon={faGithub} size="2x" />}
                         />
@@ -184,7 +201,6 @@ export default function Home(){
                         techImage={<FontAwesomeIcon icon={faLeaf} size="2x" />}
                         />
                     </div>
-                    
                     
                 </section>
 
