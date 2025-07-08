@@ -20,6 +20,7 @@ import curriculo from "../assets/Currículo - Guilherme de Almeida Rocha Vieira.
 import CardProject from "../components/CardProject";
 import useDocumentTitle from "../hooks/useTitle";
 import useFavicon from "../hooks/useFavicon";
+import { faMicrochip } from "@fortawesome/free-solid-svg-icons/faMicrochip";
 
 export default function Home(){
 
@@ -150,6 +151,12 @@ export default function Home(){
 
                 <h2 id="skills">Habilidades Técnicas</h2>
                 <section className={styles.tech}>
+                    <div data-aos="fade-left" data-aos-duration="1000">
+                        <CardTech
+                        techName="Inteligência Artificial"
+                        techImage={<FontAwesomeIcon icon={faMicrochip} size="2x" />}
+                        />
+                    </div>
                     <div 
                     data-aos="fade-right"
                     data-aos-duration="1000"
